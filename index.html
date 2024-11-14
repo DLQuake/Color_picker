@@ -1,32 +1,40 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <title>Color picker</title>
-
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
 
 <body data-theme="light">
-    <h1>Color Picker</h1>
+    <header class="header">
+        <div class="welcome">
+            <h1 class="welcome__title">Color Picker</h1>
 
-    <p>On this page you will be able to choose a color and get it in the form of HEX, RGB and HSL</p>
+            <p class="welcome__text">
+                On this page you will be able to choose a color and get it in the form of HEX, RGB and HSL
+                <br><br>
+                Have fun 😀
+            </p>
+        </div>
 
-    <p>Have fun 😀</p>
+        <div class="themeSwitcher theme-switcher">
+            <input class="themeSwitcher__input" type="checkbox" id="switcher">
+            <label class="themeSwitcher__label" for=switcher>switch</label>
+        </div>
+    </header>
 
-    <div class="theme-switcher">
-        <input type="checkbox" id="switcher">
-        <label for=switcher>switch</label>
-    </div>
+    <main class="main">
+        <div id="colorpicker" class="colorPicker">
+            <input class="colorPicker__input" type="color" name="Color Picker">
+        </div>
+    </main>
 
-    <div id="colorpicker">
-        <input type="color" name="Color Picker">
-    </div>
-
-    <script src="script.js"></script>
+    <script src="./js/themeSwitcher.js"></script>
 </body>
 
 </html>
