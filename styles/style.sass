@@ -1,0 +1,26 @@
+$White: #FFFFFF
+$DarkBlue: #191a25
+$DarkPurple: #2e2a44
+
+@import "welcome"
+@import "themeSwitcher"
+@import "main"
+@import "colorPicker"
+
+*
+    font-family: Arial, Helvetica, sans-serif
+    text-align: center
+    color: var(--color-4)
+    background-color: var(--color-1)
+
+    &[data-theme="light"]
+        --color-1: #c4dcf1
+        --color-2: white
+        --color-3: white
+        --color-4: #50526e
+
+    &[data-theme="dark"]
+        --color-1: #1e1f26
+        --color-2: #292c33
+        --color-3: #27282a
+        --color-4: #babaca

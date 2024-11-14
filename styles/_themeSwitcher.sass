@@ -1,0 +1,41 @@
+.themeSwitcher
+    position: absolute
+    right: 30px
+    top: 10px
+
+    &__input
+        width: 0
+        height: 0
+        display: none
+        visibility: hidden
+
+    &__label
+        cursor: pointer
+        display: block
+        text-indent: -9999px
+        height: 30px
+        width: 60px
+        border-radius: 50px
+        border: 2px solid $DarkBlue
+        background-color: $White
+        transition: 0.5s ease background-color
+
+        &::after
+            position: absolute
+            content: ""
+            width: 20px
+            height: 20px
+            border-radius: 50px
+            top: 50%
+            left: 5px
+            transform: translateY(-50%)
+            background-color: $DarkPurple
+            transition: 0.5s ease
+
+    input:checked + label
+        background-color: $DarkBlue
+        border: 2px solid whitesmoke
+
+        &::after
+            left: calc(100% - 25px)
+            background-color: aliceblue
